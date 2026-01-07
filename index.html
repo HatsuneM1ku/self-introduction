@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial;
+            margin: 60px;
+        }
+
+        header {
+            margin-bottom: 36px;
+        }
+
+        section+section {
+            margin-top: 36px;
+        }
+
+        /* Interests 横向排列，文本在上，图片在下 */
+        .interests {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            /* 间距可调 */
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+            /* 窄屏时换行 */
+            align-items: flex-start;
+        }
+
+        .interests li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 220px;
+            /* 每项固定宽度，按需调整 */
+            text-align: center;
+        }
+
+        .interests img {
+            width: 100% !important;
+            /* 建议去掉内联样式，这里用 !important 覆盖它 */
+            height: 160px !important;
+            /* 统一高度，按需调整 */
+            object-fit: cover;
+            /* 保持比例并裁切填满 */
+            margin-top: 8px;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .interests img.miku {
+            object-position: center 25%;
+            /* 调整为 60%/70% 直到满意 */
+        }
+
+        footer {
+            margin-top: 24px;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+            color: #555;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Homer's Homepage</h1>
+        <p>Welcome to my class page. Right now I am a fourth year undergraduate student at RISD.</p>
+        <p>Here is my personal website: <a href="https://www.xiangyiben.com/"><em>Xiangyi Ben</em></a></p>
+    </header>
+
+    <section>
+        <h2>Class Exercises</h2>
+        <ul>
+            <li>Exercise One: <a target="_blank"
+                    href="https://www.figma.com/design/JOInGJiM60HusgZNlgfIqW/Untitled?m=auto&t=b5KjZwWjvnIUtskY-1"><em>Figma
+                        Recreation</em></a></li>
+            <li>Exercise Two: <a href=" https://hatsunem1ku.github.io/class-website/"><em>Hello World!</em></a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <ul>
+            <li>Project One: <a href="#"><em></em></a></li>
+            <li>Project Two: <a href="#"><em></em></a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Interests</h2>
+        <ol class="interests">
+            <li>
+                <strong>Meme</strong>
+                <img src="image/doro.png"  alt="Meme">
+            </li>
+            <li>
+                <strong>Game</strong>
+                <img src="image/genshin.png"  alt="Game">
+            </li>
+            <li>
+                <strong>Food</strong>
+                <img src="image/soba.jpg"  alt="Food">
+            </li>
+            <li>
+                <strong>Vocaloid</strong>
+                <img src="image/miku.jpg" class="miku" alt="Vocaloid">
+            </li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>New Year's Resolutions</h2>
+        <ol>
+            <li>Keep working out regularly.</li>
+            <li>Practice more drawing.</li>
+            <li>Develop skills</li>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Homer.</p>
+    </footer>
+</body>
