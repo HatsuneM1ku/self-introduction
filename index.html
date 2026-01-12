@@ -7,13 +7,13 @@
     <title>Document</title>
     <style>
         :root {
-            --bg: rgb(22, 139, 150);
+            --bg: rgb(23, 161, 173);
             --text: #ffffff;
             --color: #00ff59;
         }
 
         a {
-            color: #1500ff;
+            color: #f7ff14;
             text-decoration-line: underline;
             text-decoration-thickness: 2px;
             text-decoration-color: var(--color);
@@ -98,7 +98,7 @@
 
         /* Interests 横向排列，文本在上，图片在下 */
         .interests {
-            list-style: none;
+            list-style-position: inside;
             display: flex;
             gap: 24px;
             /* 间距可调 */
@@ -135,6 +135,15 @@
             /* 调整为 60%/70% 直到满意 */
         }
 
+        #ct {
+            text-align: left;
+            /* 整体居中 */
+            list-style-position: outside;
+            /* 把点放到内容内部 */
+            /*padding-left: 0;
+            /* 避免默认缩进影响居中 */
+        }
+          
         footer {
             margin-top: 24px;
             border-top: 1px solid #eee;
@@ -174,7 +183,7 @@
 
     <section>
         <h2>Projects</h2>
-        <ul>
+        <ul id="ct">
             <li>Project One: <a href="#"><em></em></a></li>
             <li>Project Two: <a href="#"><em></em></a></li>
         </ul>
@@ -222,3 +231,5 @@
         </div>
     </footer>
 </body>
+
+</html>
